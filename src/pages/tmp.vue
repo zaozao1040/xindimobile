@@ -1,0 +1,1 @@
+:to="{path:'/teacher/' + item.id}"

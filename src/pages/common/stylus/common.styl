@@ -1,0 +1,34 @@
+text()
+  display: inline-block
+  padding: 20px
+  font-size: 15px
+  line-height: 20px
+  color: rgba(7,17,27,0.9)  
+  
+interval()
+  width: 100%
+  height: .32rem
+  background: #f3f5f7
+  border-top: .02rem solid rgba(7,17,27,0.1)
+  border-bottom: .02rem solid rgba(7,17,27,0.1)
+
+
+border-1px($color)
+  position : relative
+  &:after
+    display: block
+    position: absolute
+    left: 0
+    bottom: 0
+    border-top 1px solid $color
+    width: 100%
+    content: ''
+
+border-none()
+  &:after
+    display: none
+
+bg-image($url)
+  background-image url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio)
+    background-image url($url + "@3x.png")
